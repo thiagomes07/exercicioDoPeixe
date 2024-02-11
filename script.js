@@ -37,23 +37,23 @@ function preload() {
     );
   }
 
-  // Carrega a logo do Inteli
-  this.load.image("logoInteli", "assets/images/inteli.png");
-
-  // Carrega o tubarão do santos
-  this.load.image("santosShark", "assets/images/santosShark.png");
-
-  // Carrega o escudo do santos
-  this.load.image("santos", "assets/images/santos.png");
-
-  // Carrega o escudo do corinthians
-  this.load.image("corinthians", "assets/images/corinthians.png");
-
   // Carrega as imagens dos outros times
   for (var i = 0; i < otherTeamImages.length; i++) {
     this.load.image(otherTeamImages[i], "assets/images/" + otherTeamImages[i]);
   }
 
+  // Carrega a logo do Inteli
+  this.load.image("logoInteli", "assets/images/inteli.png");
+  
+  // Carrega o escudo do Santos
+  this.load.image("santos", "assets/images/santos.png");
+ 
+  // Carrega o tubarão do Santos
+  this.load.image("santosShark", "assets/images/santosShark.png");
+  
+  // Carrega o escudo do corinthians
+  this.load.image("corinthians", "assets/images/corinthians.png");
+ 
   // Carrega a música
   this.load.audio("backgroundMusic", "assets/music/hinoDoSantos.mp3");
 }
@@ -113,8 +113,8 @@ function create() {
     corinthians.setTexture(otherTeamImages[currentTeamIndex]);
 
     // Soma ao contador de vezes em que o cursor passa por cima dos outros escudos de time
-    eatTeamCount++
-    h1Element.innerHTML = eatTeamCount
+    eatTeamCount++;
+    h1Element.innerHTML = eatTeamCount;
 
     // Torna a imagem do time atual visível novamente
     corinthians.setVisible(true);
